@@ -4,55 +4,10 @@
 </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css"/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-  body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-    scroll-behavior: smooth;
-  }
-  
-  /* Create a Parallax Effect */
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /* First image (Logo. Full height) */
-  .bgimg-1 {
-    background-image: url('/w3images/parallax1.jpg');
-    min-height: 100%;
-  }
-  
-  /* Second image (Portfolio) */
-  .bgimg-2 {
-    background-image: url("/w3images/parallax2.jpg");
-    min-height: 400px;
-  }
-  
-  /* Third image (Contact) */
-  .bgimg-3 {
-    background-image: url("/w3images/parallax3.jpg");
-    min-height: 400px;
-  }
-  
-  .w3-wide {letter-spacing: 10px;}
-  .w3-hover-opacity {cursor: pointer;}
-  
-  /* Turn off parallax scrolling for tablets and phones */
-  @media only screen and (max-device-width: 1600px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-      background-attachment: scroll;
-      min-height: 400px;
-    }
-  }
-  </style>
 <body>
 <!-- navbar  -->
 <div class="w3-top">
@@ -60,7 +15,7 @@
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+    <a href="#header" class="w3-bar-item w3-button">HOME</a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
       
@@ -74,7 +29,7 @@
   </div>
 </div>
 <!-- Header -->
-<header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+<header class="w3-display-container w3-content w3-center" style="max-width:1500px" id="header">
   <img class="w3-image" src="assets/angel (2).jpg" alt="Me" width="1500" height="600">
   <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
     <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Angel Diosdado</h1>
@@ -151,72 +106,6 @@
     rel="noopener" class="fa fa-linkedin w3-hover-opacity"></a>
   </div>
 </footer>
-<script>
-   window.addEventListener("DOMContentLoaded", function() {
-
-// get the form elements defined in your form HTML above
-
-var form = document.getElementById("my-form");
-var button = document.getElementById("my-form-button");
-var status = document.getElementById("my-form-status");
-
-// Success and Error functions for after the form is submitted
-
-function success() {
-  form.reset();
-  button.style = "display: none ";
-  status.innerHTML = "Thanks!";
-}
-
-function error() {
-  status.innerHTML = "Oops! There was a problem.";
-}
-
-// handle the form submission event
-
-form.addEventListener("submit", function(ev) {
-  ev.preventDefault();
-  var data = new FormData(form);
-  ajax(form.method, form.action, data, success, error);
-});
-});
-
-// helper function for sending an AJAX request
-
-function ajax(method, url, data, success, error) {
-var xhr = new XMLHttpRequest();
-xhr.open(method, url);
-xhr.setRequestHeader("Accept", "application/json");
-xhr.onreadystatechange = function() {
-  if (xhr.readyState !== XMLHttpRequest.DONE) return;
-  if (xhr.status === 200) {
-    success(xhr.response, xhr.responseType);
-  } else {
-    error(xhr.status, xhr.response, xhr.responseType);
-  }
-};
-xhr.send(data);
-}  
-  // Change style of navbar on scroll
-  window.onscroll = function() {myFunction()};
-  function myFunction() {
-      var navbar = document.getElementById("myNavbar");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-      } else {
-          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-      }
-  }
-  
-  // Used to toggle the menu on small screens when clicking on the menu button
-  function toggleFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-      } else {
-          x.className = x.className.replace(" w3-show", "");
-      }
-  }
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
