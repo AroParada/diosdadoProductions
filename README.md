@@ -9,10 +9,9 @@ Made with simple Html, CSS, and Javascript
 
 
 ## Screenshot and Deployed link
-* [HEROKU Deployment](https://myburgereater.herokuapp.com/)
 * DEPLOYMENT - https://www.diosdadophotography.com/
 
-<img src="assets\angel (2).jpg">
+<img src="assets\Screenshot (12).png">
 
 ### Contact for questions
 haroldparada20@gmail.com
