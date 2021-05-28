@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", function() {
-
+  
     // get the form elements defined in your form HTML above
     
     var form = document.getElementById("my-form");
@@ -11,7 +11,8 @@ window.addEventListener("DOMContentLoaded", function() {
     function success() {
       form.reset();
       button.style = "display: none ";
-      status.innerHTML = "Thanks!";
+      // status.innerHTML = "Thanks!";
+      swal("Thanks!", "We will be in contact shortly!", "success");
     }
     
     function error() {
